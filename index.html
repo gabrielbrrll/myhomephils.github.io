@@ -4,7 +4,11 @@
         <title>MyHome Real Estate</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat|Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
         <link rel="stylesheet" href="builds/css/style.css">
+        
     </head>
     <body>
         <div class='menu-container'>
@@ -14,48 +18,51 @@
                 </div>
                 <nav>
                     <ul>
+                        <li><i class="material-icons md-18">phone_android</i>  </li>
                         <li>+639293330381</li>
                         <li>9000293</li>
-                        <li>f</li>
+                        <li>fb</li>
                         <li>ig</li>
-                        <li>mail</li>
-                        <li style="margin-right:0"><input type="text" placeholder="search">sIcon</li>
+                        <li><i class="material-icons md-18">email</i></li>
+                        <li style="margin-right:0"><i class="material-icons md-18">search</i></li>
                     </ul>  
                     <ul>
                         <li><a href="index.html">HOME</a></li>
+                        <li><a href="builds/html/about.html">ABOUT</a></li>
                         <div class="dropdown">
-                            <li><a href="builds/html/about.html">ABOUT</a></li>
+                            <li><a href="#">DEVELOPERS</a></li>
                             <div class="dropdown-content">
-                                <p>About1</p>
-                                <p>About2</p>
-                                <p>About3</p>
+                                <p>Ayala Land</p>
+                                <p>Moldex</p>
+                                <p>Camella</p>
+                                <p>St. Catherine Realty</p>
+                                <p>Filinvest</p>                           
+                                <p>Pueblo de Oro</p>                         
+                                <p>Gonzalo Puyat</p>                          
+                                <p>Northpine</p>
+                                <p>Central Country Estate</p>
+                                <p>Landco Pacifico</p>                       
+                                <p>Fiesta Communities</p>
+                                <p>8990 Holdings</p>
+                                <p>Herencia de Julieta Realty</p>
+                                <p>Solana</p>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <li>PROJECTS</li>
+                            <li><a href="#">PROJECTS</a></li>
                             <div class="dropdown-content">
-                                <p>Project1</p>
-                                <p>Project2</p>
-                                <p>Project3</p>
+                                <p>Lots Only</p>
+                                <p>Houses</p>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <li>PROPERTIES</li>
+                            <li><a href="#">SERVICES</a></li>
                             <div class="dropdown-content">
-                                <p>Property1</p>
-                                <p>Property1</p>
-                                <p>Property1</p>
+                                <p>Other Property Listings and RFO's</p>
+                                <p>House Construction, Design and Renovation</p>
                             </div>
                         </div>
-                        <div class="dropdown">
-                            <li>SERVICES</li>
-                            <div class="dropdown-content">
-                                <p>Service1</p>
-                                <p>Service2</p>
-                                <p>Service3</p>
-                            </div>
-                        </div>
-                        <li style="margin-right:0">CONTACT</li>
+                        <li style="margin-right:0"><a href="builds/html/contact.html">CONTACT</a></li>
                     </ul>   
                 </nav>
             </div>
@@ -63,20 +70,17 @@
         <div class="quick-search">
             <select>
                 <option value="">Property Type</option>
-                <option value="">House/Condo</option>
-                <option value="">House Only</option>
-                <option value="">Condo Only</option>
-                <option value="">Lots/Land</option>
+                <option value="">Lots</option>
+                <option value="">Houses</option>
             </select>
             <select>
                 <option value="">City</option>
                 <option value="">Angeles</option>
                 <option value="">San Fernando</option>
                 <option value="">Clark</option>
-                <option value="">Clark</option>
                 <option value="">Mabalacat</option>
             </select>
-            <select>
+            <select class="smaller">
                 <option value="">Beds</option>
                 <option value="">Any</option>
                 <option value="">1+</option>
@@ -84,7 +88,7 @@
                 <option value="">2+</option>
                 <option value="">4+</option>
             </select>
-            <select>
+            <select class="smaller">
                 <option value="">Baths</option>
                 <option value="">Any</option>
                 <option value="">1+</option>
@@ -104,51 +108,51 @@
                 <option value="">2,000,000</option>
                 <option value="">3,000,000</option>
             </select>
-            <p>Search Property</p>
-            <p>Advanced Search</p>
+            <button class="quick">Search Property</button>
+            <button class="quick">Advanced Search</button>
         </div>
         <div class='header-container'>
             <div class='header'>
-                <div>Sell out or lease your property? </br>/*insert bg image*/</div>
-                <div>Why list with us? </br>/*insert bg image*/</div>
-                <div>Grow your own Real Estate Marketing Enterprise! </br>/*insert bg image*/</div>
+                <div class="header-one">SELL OR LEASE YOUR PROPERTY?</div>
+                <div class="header-two">WHY LIST WITH US?</div>
+                <div class="header-three">REFERRAL OPPORTUNITIES!</div>
             </div>
         </div>
         <div class="about">
             <div class="about-content">
                 <p>Welcome</p>
-                <h1>MyHome Philippines</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel auctor erat, tempor luctus leo. Proin congue tempor lacus quis eleifend. Curabitur gravida turpis id enim consequat euismod. Integer pretium elementum eleifend. Maecenas risus elit, auctor efficitur dapibus suscipit, scelerisque vel eros. Nullam sollicitudin rutrum ultrices. Nam lobortis ipsum non tortor luctus finibus.</p>
-                <hr style="height:1px; margin: 5em 5em">
-                <p>Featured Communities</p>
+                <h1>MY HOME PHILIPPINES</h1>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel auctor erat, tempor luctus leo. Proin congue tempor lacus quis eleifend. Curabitur gravida turpis id enim consequat euismod. Integer pretium elementum eleifend. Maecenas risus elit, auctor efficitur dapibus suscipit, scelerisque vel eros. Nullam sollicitudin rutrum ultrices. Nam lobortis ipsum non tortor luctus finibus.</p>
+                <hr style="height:1px; margin: 5em 5em; border-style: none; background-color: #8a8a8a;">
+                <p class="featured-communities">Featured <strong>Communities</strong></p>
                 <div class='featured-container'>
                     <div class='community-grid'>
                         <div class='community-grid-item'>
-                            <p>Community1</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community2</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community3</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community4</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community5</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community6</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community7</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community8</p>
+                            <p>COMMUNITY</p>
                         </div>
                         <div class='community-grid-item'>
-                            <p>Community9</p>
+                            <p>COMMUNITY</p>
                         </div>
                     </div>
                 </div>

@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 12px;
 }
 
 a {
     color: #fff;
+    text-decoration: none;
 }
 
 html {
@@ -21,24 +21,40 @@ img {
     min-width: 100%;
 }
 
+/*material icons css*/
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/*start of body*/
+
 body {
     min-height: 100%;
     height: 100%;
-    background: url(../../assets/img/background.jpg) no-repeat center center fixed;
+    background: url(../../assets/img/background3.jpg) no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Source Sans Pro', sans-serif;    
 }
 
+/*nav container*/
+
 .menu-container {
-    color: #fff;
-    background-color: rgba(0, 74, 32, 0.8);  
+    color: rgb(0, 121, 14);
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px 0;
     display: flex;
     justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.menu-container a {
+    color: rgb(0, 121, 14);
 }
   
 .menu {
-    border: 1px solid #fff;  /* For debugging */
     width: 95%;
     display: flex;
     justify-content: space-between;
@@ -49,8 +65,9 @@ body {
 }
 
 nav {
-    border: 1px solid #fff;  /* For debugging */
     text-align: right;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
 nav ul {
@@ -70,13 +87,13 @@ nav ul:first-of-type {
 
 nav ul:first-of-type li {
     margin-right: 1em;
-    border: 1px solid #fff;  /* For debugging */
 }
 
 nav ul:nth-of-type(2) li {
     margin-right: 4em;
-    border: 1px solid #fff;  /* For debugging */
 }
+
+/*dropdown content*/
 
 .dropdown {
     position: relative;
@@ -87,18 +104,56 @@ nav ul:nth-of-type(2) li {
     display: none;
     position: absolute;
     z-index: 1;
+    text-align: left;
+    background: #ffffff;
+    padding: 1em;
+    width: 14em;
+}
+
+.dropdown-content p {
+    padding-bottom: 0.5em;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/*underline animation of nav elements*/
+
+li > a {
+    position: relative;
+    text-decoration: none;
+}
+
+li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #008d0e;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+li > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/* header section */
+
 .header-container {
-    color: rgb(7, 7, 7);
     background-color: #fff;
     display: flex;
     justify-content: center;
     width: 100%;
+    overflow: hidden; 
 }
   
 .header {
@@ -107,20 +162,61 @@ nav ul:nth-of-type(2) li {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header * {
-    border: 1px solid #000000;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    transition: all 0.5s ease;
+    color: #fff;
 }
 
+.header-one {
+    background: linear-gradient(
+    rgba(0, 0, 0, .8),
+    rgba(0, 0, 0, .1)),
+    url("../../assets/img/header1.jpg") 100% / cover ;
+    padding: 1.5em;
+}
+
+.header-one:hover,
+.header-two:hover,
+.header-three:hover {
+    font-size: 20px;
+    width: 125%;
+
+}
+
+.header-two {
+    background: linear-gradient(
+    rgba(0, 0, 0, .8),
+    rgba(0, 0, 0, .1)),
+    url("../../assets/img/header2.jpg") 100% / cover ;
+    padding: 1.5em;
+}
+
+.header-three {
+    background: linear-gradient(
+    rgba(0, 0, 0, .8),
+    rgba(0, 0, 0, .1)),
+    url("../../assets/img/header3.jpg") 100% / cover ;
+    padding: 1.5em;
+}
+
+select, button {
+    outline: 0;
+}
+
+/*search section*/
+
 .quick-search {
-    color: #fff;
-    background-color: rgba(0, 74, 32, 0.8);  
+    color: rgb(0, 141, 14);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -129,6 +225,17 @@ nav ul:nth-of-type(2) li {
 
 .quick-search select {
     margin-right: 1em;
+    background-color: transparent;
+    color: rgb(0, 141, 14);
+    width: 12em;
+    padding: 5px 0;
+    border: 1px solid rgb(0, 141, 14);
+    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.quick-search select.smaller {
+    width: 6em;
 }
 
 .quick-search p {
@@ -136,10 +243,27 @@ nav ul:nth-of-type(2) li {
     margin-right: 1em;
 }
 
+.quick {
+    background-color: transparent;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid rgb(0, 141, 14);
+    font-size: 12px;
+    width: 12em;    
+    color: rgb(0, 141, 14);
+}
+
+.quick:first-of-type {
+    background-color: rgb(0, 141, 14);
+    color: #fff;    
+}
+
+/*about the company*/
+
 .about {
     background: url("../../assets/img/background2.jpg");
-    height: 100%;
+    height: auto;
     width: 100%;
+    color: #2c2c2c;
 }
 
 .about-content {
@@ -149,8 +273,19 @@ nav ul:nth-of-type(2) li {
     padding-top: 7em;
 }
 
-.about-content * {
+.about-content h1 {
+    font-size: 36px;
+}
+
+.text {
+    margin-top: 2em;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.featured-communities {
     margin-bottom: 1em;
+    font-size: 24px;
 }
 
 .featured-container {
@@ -162,13 +297,33 @@ nav ul:nth-of-type(2) li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 8em;
 }
 
 .community-grid-item {
-    border: 1px solid #fff;
+    border: 1px solid #8a8a8a;
     width: 300px;
     margin-right: 1em;
+    margin: 0.5em 0.5em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.community-grid-item p {
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.community-grid-item:hover {
+    background-color: rgb(0, 121, 14);
+    color: #fff;
+    
+}
+
+/*featured properties*/
 
 .featured-properties {
     background: #fff;
@@ -196,6 +351,8 @@ nav ul:nth-of-type(2) li {
     align-items: center;
     margin: 3em 1em;
 }
+
+/*footer 'to*/
 
 footer {
     background: url("../../assets/img/footer.jpg");
