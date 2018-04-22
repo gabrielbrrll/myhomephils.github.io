@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat|Source+Sans+Pro" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-        <link rel="stylesheet" href="builds/css/style.css">
+        <link rel="stylesheet" href="builds/css/style.css"> 
         
     </head>
     <body>
@@ -120,7 +120,7 @@
         </div>
         <div class="about">
             <div class="about-content">
-                <p>Welcome</p>
+                <p>Welcome to</p>
                 <h1>MY HOME PHILIPPINES</h1>
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel auctor erat, tempor luctus leo. Proin congue tempor lacus quis eleifend. Curabitur gravida turpis id enim consequat euismod. Integer pretium elementum eleifend. Maecenas risus elit, auctor efficitur dapibus suscipit, scelerisque vel eros. Nullam sollicitudin rutrum ultrices. Nam lobortis ipsum non tortor luctus finibus.</p>
                 <hr style="height:1px; margin: 5em 5em; border-style: none; background-color: #8a8a8a;">
@@ -159,41 +159,61 @@
             </div>
         </div>
         <div class="featured-properties">
-            <div class="featured-properties-container">
-                <p>Featured Properties</p>
-                <div class="featured-carousel">
-                    <div>Carousel1</div>
-                    <div>Carousel2</div>
-                    <div>Carousel3</div>
-                    <div>Carousel4</div>
+            <p class="featured-communities">Featured <strong>Properties</strong></p>
+            <div class="siema">
+                <div class="siema-container">
+                    <img src="assets/img/dog.jpg" alt="">
+                    <div class="centered">Property Name</br>Address</div>
+                </div>
+                <div class="siema-container">
+                    <img src="assets/img/dog.jpg" alt="">
+                    <div class="centered">Property Name</br>Address</div>
+                </div>
+                <div class="siema-container">
+                    <img src="assets/img/dog.jpg" alt="">
+                    <div class="centered">Property Name</br>Address</div>
+                </div>
+                <div class="siema-container">
+                    <img src="assets/img/dog.jpg" alt="">
+                    <div class="centered">Property Name</br>Address</div>
+                </div>
+                <div class="siema-container">
+                    <img src="assets/img/dog.jpg" alt="">
+                    <div class="centered">Property Name</br>Address</div>
                 </div>
             </div>
+            <button class="prev quick"><i class="material-icons">keyboard_arrow_left</i></button>
+            <button class="next quick"><i class="material-icons">keyboard_arrow_right</i></button>
         </div>
         <footer>
-            <div class="footer-items">
-                <div style="padding-top:6em">address</br>Marquee Mall</div>
-                <div><img src="assets/img/samplelogo.png" alt=""></div>
-                <div style="padding-top:6em">fb ig </br> myhomephils@gmail.com</div>
-            </div>
-            <p style="text-align: center; width: 100%;">Associations</p>
-            <div class="associations">
-                <ul>
-                    <li>myhomephils.com</li>
-                    <li>ayalacommunities.com</li>
-                    <li>realestate.com</li>
-                </ul>
-            </div>
-            <p style="text-align: center; width: 100%;">© 2018 MYHOME PHILIPPINES. ALL RIGHTS RESERVED</p>
-            <div class="partners">
-                <ul>
-                    <li>Partner1</li>
-                    <li>Partner2</li>
-                    <li>Partner3</li>
-                    <li>Partner4</li>
-                    <li>Partner5</li>
-                    <li>Partner6</li>
-                </ul>
+            <div class="footer-container">
+                <div class="information">
+                    <div class="address"><i class="material-icons md-36">location_on</i></br>Ground Flr., Marquee Mall, Angeles City,</br>Pampanga, Philippines</div>
+                    <div class="footer-logo"><img src="assets/img/samplelogo-small.png" alt=""></div>
+                    <div class="social"><i class="material-icons md-36">email</i></br>myhomephils@gmail.com</br>0929 333 0381</div>
+                </div>
+                <div class="associations">
+                    <i class="material-icons md-36">web</i>
+                    <p>ASSOCIATIONS</p>
+                    <div style="padding-bottom: 0.5em">myhomephils.com | ayalacommunities.com | realestate.com</div>
+                    <div style="padding-bottom: 3em">© 2018 MY HOME PHILIPPINES. ALL RIGHTS RESERVED</div>
+                </div>
+                <div class="partners">
+                    <i class="material-icons md-36">group</i>
+                    <p>PARTNERS</p>
+                </div>
             </div>
         </footer>
+
+        <script src="builds/js/siema.min.js"></script>
+        <script>
+            const mySiema = new Siema({
+                perPage: 2,
+                loop: true,
+                duration: 500
+            });
+            document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+            document.querySelector('.next').addEventListener('click', () => mySiema.next());
+        </script>
     </body>
 </html>
